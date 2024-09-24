@@ -1,0 +1,72 @@
+﻿@using Newtonsoft.Json
+@model int
+
+<h2>Pedidos por cliente del último mes</h2>
+
+@if (TempData["Errores"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Errores"]
+    </div>
+}
+
+<style>
+    .ListaHorizontal {
+        overflow: hidden;
+        table-layout: fixed;
+        width: 102%;
+        border-collapse: collapse;
+        border: 1px black solid;
+    }
+
+    th, td {
+        overflow-wrap: anywhere;
+        width: 50%;
+        border: 1px black solid;
+        padding: 10px;
+    }
+</style>
+
+<form asp-action="PedidosClienteMes" method="post">
+    <div class="form-group">
+        <label for="IDCliente">Ingrese la ID del cliente</label>
+        <input type="number" id="IDCliente" name="IDCliente" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+
+@if (TempData["Pedidos"] != null)
+{
+    var pedidos = JsonConvert.DeserializeObject<List<Pedido>>((string)TempData["Pedidos"]);
+
+    <h3>Lista de pedidos del último mes</h3>
+    @if (pedidos.Count > 0)
+    {
+        <table class="ListaHorizontal">
+            <thead>
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Fecha</th>
+                    <th>Costo</th>
+                    <th>ID Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pedido in pedidos)
+                {
+                    <tr>
+                        <td>@pedido.ID</td>
+                        <td>@pedido.Fecha</td>
+                        <td>@pedido.Costo</td>
+                        <td>@pedido.IDCliente</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No se encontraron pedidos en este último mes.</p>
+    }
+}

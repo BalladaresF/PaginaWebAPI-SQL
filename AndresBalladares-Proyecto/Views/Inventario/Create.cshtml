@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Insertar inventario";
+}
+
+<body>
+    <h1>Insertar inventario</h1>
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Mensaje"]
+        </div>
+    }
+    @if (TempData["Errores"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Errores"]
+        </div>
+    }
+
+    <form asp-controller="Inventario" asp-action="Store" method="post">
+        <label for="ID">ID del artículo:</label>
+        <input type="number" name="ID" id="ID_Artículo" class="form-control" required><br>
+
+        <label for="Cantidad">Cantidad en existencia:</label>
+        <input type="number" name="Cantidad" id="Cantidad_Existencia" class="form-control" required><br>
+
+        <label for="IDBodega">ID de bodega:</label>
+        <input type="number" name="IDBodega" id="ID_Bodega" class="form-control" required><br>
+
+        <label for="FechaIngreso">Fecha de ingreso a la bodega:</label>
+        <input type="date" name="FechaIngreso" id="Fecha_Ingreso" class="form-control" required><br>
+
+        <label for="FechaVencimiento">Fecha de vencimiento:</label>
+        <input type="date" name="FechaVencimiento" id="Fecha_Vencimiento" class="form-control" required><br>
+
+        <label for="Tipo">Tipo de licor:</label>
+        <select name="Tipo" id="Tipo_Licor" class="form-control" required>
+            <option value="" disabled selected>Seleccione un tipo de licor</option>
+            <option value="Cerveza">Cerveza</option>
+            <option value="Tequila">Tequila</option>
+            <option value="Ron">Ron</option>
+            <option value="Ginebra">Ginebra</option>
+            <option value="Whiskey">Whiskey</option>
+            <option value="Digestivo">Digestivo</option>
+            <option value="Agua ardiente">Agua ardiente</option>
+            <option value="Vino tinto">Vino tinto</option>
+            <option value="Vino blanco">Vino blanco</option>
+            <option value="Vino rosado">Vino rosado</option>
+            <option value="Champagne">Champagne</option>
+        </select><br>
+
+        <label for="Precio">Precio individual sin IVA:</label>
+        <input type="number" name="Precio" id="Precio" class="form-control" required><br>
+
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+

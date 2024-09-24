@@ -1,0 +1,68 @@
+﻿@model List<AndresBalladares_Proyecto.Models.Cliente>
+@{
+    ViewData["Title"] = "Eliminar clientes";
+}
+
+<h1>Eliminar clientes</h1>
+<h2 style="font-family: Arial, sans-serif; font-size: 16px;">
+    Orden: 1. Clientes. 2. Inventarios. 3. Direcciones. 4. Pedidos.
+    Si se elimina un elemento conectado a otro con mayor prioridad, este no se eliminará.
+</h2>
+
+<style>
+    .ListaHorizontal {
+        overflow: hidden;
+        table-layout: fixed;
+        width: 102%;
+        border-collapse: collapse;
+        border: 1px black solid;
+    }
+
+    th, td {
+        overflow-wrap: anywhere;
+        width: 50%;
+        border: 1px black solid;
+        padding: 10px;
+    }
+</style>
+
+@if (Model.Count > 0)
+{
+    <div class="ListaHorizontal">
+        <h2 align="center">Presione el botón para eliminar el cliente</h2>
+        <table class="ListaHorizontal">
+            <tr>
+                <th>Eliminar</th>
+                <th>ID</th>
+                <th>Clave</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Dinero comprado en total</th>
+                <th>Dinero último año</th>
+                <th>Dinero últimos seis meses</th>
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>
+                        <form asp-action="Borrar" asp-controller="Clientes" method="post">
+                            <input type="hidden" name="ID" value="@cliente.ID" />
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                    <td>@cliente.ID</td>
+                    <td>@cliente.Clave</td>
+                    <td>@cliente.Nombre</td>
+                    <td>@cliente.Apellidos</td>
+                    <td>@cliente.DineroCompradoTotal</td>
+                    <td>@cliente.DineroCompradoUltimoAño</td>
+                    <td>@cliente.DineroCompradoUltimosSeisMeses</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+else
+{
+    <p>No se encontraron datos de clientes.</p>
+}
+

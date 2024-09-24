@@ -1,0 +1,77 @@
+﻿@model AndresBalladares_Proyecto.Models.ModelosViewModel
+@{
+    ViewData["Title"] = "Actualizar dirección";
+}
+
+<h1>Actualizar dirección</h1>
+
+@if (Model.Direcciones.Count > 0)
+{
+    @if (TempData["Mensaje"] != null)
+    {
+        <div class="alert alert-success">
+            @Html.Raw(TempData["Mensaje"])
+        </div>
+    }
+    @if (TempData["Errores"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Errores"]
+        </div>
+    }
+
+    <form asp-controller="Direcciones" asp-action="Editar" method="post">
+        <label for="direccionSeleccionada">Seleccione una dirección:</label>
+        <select name="direccionSeleccionada" class="form-control" id="ID" required>
+            <option value="">-- Seleccione una dirección --</option>
+            @foreach (var direccion in Model.Direcciones)
+            {
+                <option value="@direccion.ID">@direccion.ID - @direccion.IDCliente - @direccion.Distrito</option>
+            }
+        </select><br>
+
+        <label for="ID">ID:</label>
+        <input type="number" name="ID" id="ID" class="form-control" required><br>
+
+        <label for="IDCliente">ID del cliente:</label>
+        <select name="IDCliente" class="form-control" id="IDCliente" required>
+            <option value="">-- Seleccione un cliente --</option>
+            @foreach (var cliente in Model.Clientes)
+            {
+                <option value="@cliente.ID">@cliente.ID - @cliente.Nombre @cliente.Apellidos</option>
+            }
+        </select><br>
+
+        <label for="Provincia">Provincia:</label>
+        <input type="text" name="Provincia" id="Provincia" class="form-control" required><br>
+
+        <label for="Canton">Cantón:</label>
+        <input type="text" name="Canton" id="Canton" class="form-control" required><br>
+
+        <label for="Distrito">Distrito:</label>
+        <input type="text" name="Distrito" id="Distrito" class="form-control" required><br>
+
+        <label for="PuntoWaze">Punto Waze:</label>
+        <input type="text" name="PuntoWaze" id="PuntoWaze" class="form-control" required><br>
+
+        <label for="URL">URL:</label>
+        <input type="text" name="URL" id="URL" class="form-control" required><br>
+
+        <div class="form-group">
+            <label for="EsCondominio">Es Condominio:</label>
+            @Html.DropDownList("EsCondominio", new List<SelectListItem>
+        {
+        new SelectListItem { Text = "Seleccione una opción", Value = "", Selected = true, Disabled = true },
+        new SelectListItem { Text = "Sí", Value = "true" },
+        new SelectListItem { Text = "No", Value = "false" }
+        }, new { @class = "form-control", required = "required" })
+        </div>
+
+
+        <input type="submit" value="Editar">
+    </form>
+}
+else
+{
+    <p>No se encontraron datos de direcciones.</p>
+}

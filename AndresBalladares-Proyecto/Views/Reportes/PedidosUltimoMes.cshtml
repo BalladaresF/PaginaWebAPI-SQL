@@ -1,0 +1,61 @@
+﻿@model List<AndresBalladares_Proyecto.Models.Pedido>
+@{
+    ViewData["Title"] = "Pedidos último mes";
+}
+<h1>Buscar pedidos</h1>
+
+<style>
+    .ListaHorizontal {
+        overflow: hidden;
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px black solid;
+    }
+
+    th, td {
+        overflow-wrap: anywhere;
+        width: 50%;
+        border: 1px black solid;
+        padding: 10px;
+    }
+</style>
+
+
+@if (Model.Count > 0)
+{
+    <div class="ListaHorizontal">
+        <h2 align="center">Pedidos del último mes</h2>
+        <table class="ListaHorizontal">
+            <tr>
+                <th>ID</th>
+                <th>ID del cliente</th>
+                <th>ID de la dirección</th>
+                <th>ID del artículo</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Costo base</th>
+                <th>Costo final</th>
+                <th>Estado</th>
+            </tr>
+            @foreach (var pedido in Model)
+            {
+                <tr>
+                    <td>@pedido.ID</td>
+                    <td>@pedido.IDCliente</td>
+                    <td>@pedido.IDDireccion</td>
+                    <td>@pedido.IDInventario</td>
+                    <td>@pedido.Cantidad</td>
+                    <td>@pedido.Fecha</td>
+                    <td>@pedido.CostoSinIva</td>
+                    <td>@pedido.Costo</td>
+                    <td>@pedido.Estado</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+else
+{
+    <p>No se encontraron datos de pedidos.</p>
+}

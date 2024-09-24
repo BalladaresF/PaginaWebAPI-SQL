@@ -1,0 +1,73 @@
+﻿@model List<AndresBalladares_Proyecto.Models.Pedido>
+@{
+    ViewData["Title"] = "Eliminar pedidos";
+}
+
+<h1>Eliminar pedidos</h1>
+<h2 style="font-family: Arial, sans-serif; font-size: 16px;">
+    Orden: 1. Clientes. 2. Inventarios. 3. Direcciones. 4. Pedidos.
+    Si se elimina un elemento conectado a otro con mayor prioridad, este no se eliminará.
+</h2>
+
+<style>
+    .ListaHorizontal {
+        overflow: hidden;
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px black solid;
+    }
+
+    th, td {
+        overflow-wrap: anywhere;
+        width: 50%;
+        border: 1px black solid;
+        padding: 10px;
+    }
+</style>
+
+@if (Model.Count > 0)
+{
+    <div class="ListaHorizontal">
+        <h2 align="center">Presione el botón para eliminar el pedido</h2>
+        <table class="ListaHorizontal">
+            <tr>
+                <th>Eliminar</th>
+                <th>ID</th>
+                <th>ID del cliente</th>
+                <th>ID de la dirección</th>
+                <th>ID del artículo</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Costo base</th>
+                <th>Costo final</th>
+                <th>Estado</th>
+            </tr>
+            @foreach (var pedido in Model)
+            {
+                <tr>
+                    <td>
+                        <form asp-action="Borrar" asp-controller="Pedidos" method="post">
+                            <input type="hidden" name="ID" value="@pedido.ID" />
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                    <td>@pedido.ID</td>
+                    <td>@pedido.IDCliente</td>
+                    <td>@pedido.IDDireccion</td>
+                    <td>@pedido.IDInventario</td>
+                    <td>@pedido.Cantidad</td>
+                    <td>@pedido.Fecha</td>
+                    <td>@pedido.CostoSinIva</td>
+                    <td>@pedido.Costo</td>
+                    <td>@pedido.Estado</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+else
+{
+    <p>No se encontraron datos de pedidos.</p>
+}
+

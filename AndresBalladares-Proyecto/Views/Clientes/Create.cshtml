@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Insertar cliente";
+}
+
+<body>
+    <h1>Insertar cliente</h1>
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <div class="alert alert-success">
+            @Html.Raw(TempData["Mensaje"])
+        </div>
+    }
+    @if (TempData["Errores"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Errores"]
+        </div>
+    }
+
+    <form asp-controller="Clientes" asp-action="Store" method="post">
+        <label for="ID">Identificación:</label>
+        <input type="number" name="ID" id="ID" class="form-control" required><br>
+
+        <label for="Nombre">Nombre:</label>
+        <input type="text" name="Nombre" id="Nombre" class="form-control" required><br>
+
+        <label for="Apellidos">Apellidos:</label>
+        <input type="text" name="Apellidos" id="Apellidos" class="form-control" required><br>
+
+        <label for="DineroCompradoTotal">Cantidad de dinero comprado total:</label>
+        <input type="number" name="DineroCompradoTotal" id="Dinero_Comprado_Total" class="form-control" required><br>
+
+        <label for="DineroCompradoUltimoAño">Cantidad de dinero comprado en el último año:</label>
+        <input type="number" name="DineroCompradoUltimoAño" id="Dinero_Comprado_UltimoAño" class="form-control" required><br>
+
+        <label for="DineroCompradoUltimosSeisMeses">Cantidad de dinero comprado en los últimos seis meses:</label>
+        <input type="number" name="DineroCompradoUltimosSeisMeses" id="Dinero_Comprado_Ultimos_Seis_Meses" class="form-control" required><br>
+
+        <input type="hidden" name="Clave" value="ValorPredeterminado" />
+
+        <input type="submit" value="Guardar">
+    </form>
+</body>

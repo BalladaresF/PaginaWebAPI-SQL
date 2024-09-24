@@ -1,0 +1,44 @@
+﻿@model List<AndresBalladares_Proyecto.Models.Cliente>
+@{
+    ViewData["Title"] = "Iniciar sesión";
+}
+
+<h1>Inicio de sesión</h1>
+
+@if (Model.Count > 0)
+{
+    <body>
+        @if (TempData["Mensaje"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Mensaje"]
+            </div>
+        }
+        @if (TempData["Errores"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["Errores"]
+            </div>
+        }
+
+        <form asp-controller="Pedidos" asp-action="VerificarUsuario" method="post">
+            <label for="ID">Usuario:</label>
+            <input type="text" name="ID" id="ID" class="form-control" required><br>
+
+            <label for="ID">Contraseña:</label>
+            <input type="text" name="Clave" id="Clave" class="form-control" required><br>
+
+            <input type="submit" value="Iniciar sesión">
+        </form>
+
+        @section Scripts {
+        @{
+                await Html.RenderPartialAsync("_ValidationScriptsPartial");
+            }
+        }
+    </body>
+}
+else
+{
+    <p>No se encontraron clientes para iniciar sesión.</p>
+}

@@ -1,0 +1,69 @@
+﻿@model List<AndresBalladares_Proyecto.Models.Inventario>
+@{
+    ViewData["Title"] = "Eliminar inventario";
+}
+
+<h1>Eliminar inventario</h1>
+<h2 style="font-family: Arial, sans-serif; font-size: 16px;">
+    Orden: 1. Clientes. 2. Inventarios. 3. Direcciones. 4. Pedidos.
+    Si se elimina un elemento conectado a otro con mayor prioridad, este no se eliminará.
+</h2>
+
+<style>
+    .ListaHorizontal {
+        overflow: hidden;
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px black solid;
+    }
+
+    th, td {
+        overflow-wrap: anywhere;
+        width: 50%;
+        border: 1px black solid;
+        padding: 10px;
+    }
+</style>
+
+@if (Model.Count > 0)
+{
+    <div class="ListaHorizontal">
+        <h2 align="center">Presione el botón para eliminar el inventario</h2>
+        <table class="ListaHorizontal">
+            <tr>
+                <th>Eliminar</th>
+                <th>ID del artículo</th>
+                <th>Cantidad</th>
+                <th>ID de bodega</th>
+                <th>Fecha de ingreso</th>
+                <th>Fecha de vencimiento</th>
+                <th>Tipo</th>
+                <th>Precio</th>
+            </tr>
+            @foreach (var inventario in Model)
+            {
+                <tr>
+                    <td>
+                        <form asp-action="Borrar" asp-controller="Inventario" method="post">
+                            <input type="hidden" name="ID" value="@inventario.ID" />
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                    <td>@inventario.ID</td>
+                    <td>@inventario.Cantidad</td>
+                    <td>@inventario.IDBodega</td>
+                    <td>@inventario.FechaIngreso</td>
+                    <td>@inventario.FechaVencimiento</td>
+                    <td>@inventario.Tipo</td>
+                    <td>@inventario.Precio</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+else
+{
+    <p>No se encontraron datos de inventario.</p>
+}
+

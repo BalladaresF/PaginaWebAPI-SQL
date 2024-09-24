@@ -1,0 +1,94 @@
+﻿@using Newtonsoft.Json
+@model int
+
+<h2>Clientes con más pedidos por mes</h2>
+
+@if (TempData["Errores"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Errores"]
+    </div>
+}
+
+<style>
+    .ListaHorizontal {
+        overflow: hidden;
+        table-layout: fixed;
+        width: 102%;
+        border-collapse: collapse;
+        border: 1px black solid;
+    }
+
+    th, td {
+        overflow-wrap: anywhere;
+        width: 50%;
+        border: 1px black solid;
+        padding: 10px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<form asp-action="ClientesMasPedidosMes" method="post">
+    <div class="form-group">
+        <label for="mes">Ingrese el mes:</label>
+        <input type="number" id="mes" name="mes" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="anio">Ingrese el año</label>
+        <input type="number" id="anio" name="anio" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+
+@if (TempData["Pedidos"] != null)
+{
+    var clientes = JsonConvert.DeserializeObject<List<Reporte>>((string)TempData["Pedidos"]);
+
+    <h3>Lista de pedidos por cliente</h3>
+    @if (clientes.Count > 0)
+    {
+        <table class="ListaHorizontal">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <!--<th>Lista de pedidos</th>-->
+                    <th>Monto total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cliente in clientes)
+                {
+                    <tr>
+                        <td>@cliente.IDCliente</td>
+                        <!--
+                        <td>
+                            <ul>
+                                foreach (var idPedido in cliente.IDPedidos)
+                                {
+                                    <li>idPedido</li>
+                                }
+                            </ul>
+                        </td>
+                        -->
+                        <td>@cliente.MontoTotalPedidos</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No se encontraron pedidos en este mes.</p>
+    }
+}

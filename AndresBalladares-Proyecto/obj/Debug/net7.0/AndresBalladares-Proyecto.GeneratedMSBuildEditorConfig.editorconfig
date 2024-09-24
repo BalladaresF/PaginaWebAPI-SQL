@@ -1,0 +1,173 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AndresBalladares_Proyecto
+build_property.RootNamespace = AndresBalladares_Proyecto
+build_property.ProjectDir = Z:\Proyecto 3\AndresBalladares-Proyecto\AndresBalladares-Proyecto\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = Z:\Proyecto 3\AndresBalladares-Proyecto\AndresBalladares-Proyecto
+build_property._RazorSourceGeneratorDebug = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Direcciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Direcciones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Direcciones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Direcciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Direcciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Inventario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Inventario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Inventario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Inventario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Inventario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Pedidos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Pedidos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Pedidos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Pedidos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Pedidos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Pedidos/InicioSesion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmljaW9TZXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Reportes/ClientesMasPedidosMes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcQ2xpZW50ZXNNYXNQZWRpZG9zTWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Reportes/PedidosBodega.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUGVkaWRvc0JvZGVnYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Reportes/PedidosClienteDia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUGVkaWRvc0NsaWVudGVEaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Reportes/PedidosClienteHoraMinutos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUGVkaWRvc0NsaWVudGVIb3JhTWludXRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Reportes/PedidosClienteMes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUGVkaWRvc0NsaWVudGVNZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Reportes/PedidosDia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUGVkaWRvc0RpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Reportes/PedidosUltimoMes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUGVkaWRvc1VsdGltb01lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Reportes/PedidosUltimoTrimestre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUGVkaWRvc1VsdGltb1RyaW1lc3RyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/Proyecto 3/AndresBalladares-Proyecto/AndresBalladares-Proyecto/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,61 @@
+﻿@model List<AndresBalladares_Proyecto.Models.Direccion>
+@{
+    ViewData["Title"] = "Buscar dirección";
+}
+<h1>Buscar dirección</h1>
+
+<style>
+    .ListaHorizontal {
+        overflow: hidden;
+        table-layout: fixed;
+        width: 102%;
+        border-collapse: collapse;
+        border: 1px black solid;
+    }
+
+    th, td {
+        overflow-wrap: anywhere;
+        width: 50%;
+        border: 1px black solid;
+        padding: 10px;
+    }
+</style>
+
+
+@if (Model.Count > 0)
+{
+    <div class="ListaHorizontal">
+        <h2 align="center">Datos de las direcciones</h2>
+        <table class="ListaHorizontal">
+            <tr>
+                <th>ID</th>
+                <th>ID del cliente</th>
+                <th>Provincia</th>
+                <th>Cantón</th>
+                <th>Distrito</th>
+                <th>Punto en Waze</th>
+                <th>URL</th>
+                <th>Es condominio</th>
+            </tr>
+            @foreach (var direccion in Model)
+            {
+                <tr>
+                    <td>@direccion.ID</td>
+                    <td>@direccion.IDCliente</td>
+                    <td>@direccion.Provincia</td>
+                    <td>@direccion.Canton</td>
+                    <td>@direccion.Distrito</td>
+                    <td>@direccion.PuntoWaze</td>
+                    <td>@direccion.URL</td>
+                    <td>@direccion.EsCondominio</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+else
+{
+    <p>No se encontraron datos de direcciones.</p>
+}
+
+

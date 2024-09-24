@@ -1,0 +1,87 @@
+﻿@model AndresBalladares_Proyecto.Models.ModelosViewModel
+@{
+    ViewData["Title"] = "Insertar pedido";
+    var IDCliente = (int)TempData["IDCliente"];
+}
+
+<h1>Insertar pedido</h1>
+
+@if (Model.Inventarios != null && Model.Direcciones != null)
+{
+    <body>
+        @if (TempData["Mensaje"] != null)
+        {
+                <div class="alert alert-success">
+                @TempData["Mensaje"]
+                </div>
+        }
+        @if (TempData["Errores"] != null)
+        {
+                <div class="alert alert-danger">
+                @TempData["Errores"]
+                </div>
+        }
+
+        <form asp-controller="Pedidos" asp-action="Store" method="post">
+            <label for="ID">Cliente: @TempData["IDCliente"]. Descuentos en base a las últimas compras: >= 200 000 : 3%, >= 300 000 : 4%, >= 400 000 : 5%, >= 500 000 : 6%</label><br>
+            <input type="hidden" name="IDCliente" value="@TempData["IDCliente"]" />
+
+            <label for="ID">ID del pedido:</label>
+            <input type="number" name="ID" id="ID" class="form-control" required><br>
+
+            <label for="InventarioSeleccionado">ID del artículo:</label>
+            <select name="IDInventario" class="form-control" id="IDInventario">
+                <option value="">Seleccione un artículo</option>
+                @foreach (var articulo in Model.Inventarios)
+                {
+                    <option value="@articulo.ID">@articulo.ID - @articulo.Tipo - @articulo.Precio colones sin IVA</option>
+                }
+            </select><br>
+
+            <label for="Cantidad">Cantidad:</label>
+            <input type="number" name="Cantidad" id="Cantidad" class="form-control" required><br>
+
+            <label for="IDDireccion">Dirección:</label>
+            <select name="IDDireccion" class="form-control" id="IDDireccion">
+                <option value="" disabled selected>Seleccione una dirección</option>
+                @foreach (var direccion in Model.Direcciones)
+                {
+                    @if (direccion.IDCliente == IDCliente)
+                    {
+                        <option value="@direccion.ID">@direccion.ID - @direccion.Canton - @direccion.PuntoWaze</option>
+                    }
+                }
+            </select><br>
+
+            <label for="Fecha">Fecha del pedido:</label>
+            <input type="datetime-local" name="Fecha" id="Fecha" class="form-control" required><br>
+
+            <label for="Estado">Estado:</label>
+            <select name="Estado" id="Estado" class="form-control" required>
+                <option value="" disabled selected>Seleccione un estado</option>
+                <option value="En proceso">En proceso</option>
+                <option value="Facturado">Facturado</option>
+                <option value="Por entregar">Por entregar</option>
+                <option value="Entregado">Entregado</option>
+            </select><br>
+
+            <div class="form-group d-flex justify-content-between">
+                <input type="submit" value="Guardar">
+
+                <button type="button" class="btn btn-danger" onclick="cerrarSesion()">Cerrar Sesión</button>
+            </div>
+        </form>
+
+        <script>
+            function cerrarSesion() {
+                // Redirige a la acción de cerrar sesión sin validar el formulario
+                window.location.href = '@Url.Action("InicioSesion", "Pedidos")';
+            }
+        </script>
+        
+    </body>
+}
+else
+{
+    <p>Para realizar pedidos, ingrese al menos un inventario y una dirección.</p>
+}

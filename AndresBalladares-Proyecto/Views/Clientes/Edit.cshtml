@@ -1,0 +1,58 @@
+﻿@model List<AndresBalladares_Proyecto.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Actualizar cliente";
+}
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">
+        @Html.Raw(TempData["Mensaje"])
+    </div>
+}
+@if (TempData["Errores"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Errores"]
+    </div>
+}
+
+<h1>Actualizar cliente</h1>
+
+@if (Model.Count > 0)
+{
+    <form asp-controller="Clientes" asp-action="Editar" method="post">
+        <label for="clienteSeleccionado">Seleccione un cliente:</label>
+        <select name="clienteSeleccionado" class="form-control" id="ID" required>
+            <option value="">-- Seleccione un cliente --</option>
+            @foreach (var cliente in Model)
+            {
+                <option value="@cliente.ID">@cliente.ID - @cliente.Nombre @cliente.Apellidos</option>
+            }
+        </select><br>
+
+        <label for="ID">Identificación:</label>
+        <input type="number" name="ID" id="ID" class="form-control" required><br>
+
+        <label for="Nombre">Nombre:</label>
+        <input type="text" name="Nombre" id="Nombre" class="form-control" required><br>
+
+        <label for="Apellidos">Apellidos:</label>
+        <input type="text" name="Apellidos" id="Apellidos" class="form-control" required><br>
+
+        <label for="DineroCompradoTotal">Cantidad de dinero comprado total:</label>
+        <input type="number" name="DineroCompradoTotal" id="Dinero_Comprado_Total" class="form-control" required><br>
+
+        <label for="DineroCompradoUltimoAño">Cantidad de dinero comprado en el último año:</label>
+        <input type="number" name="DineroCompradoUltimoAño" id="Dinero_Comprado_UltimoAño" class="form-control" required><br>
+
+        <label for="DineroCompradoUltimosSeisMeses">Cantidad de dinero comprado en los últimos seis meses:</label>
+        <input type="number" name="DineroCompradoUltimosSeisMeses" id="Dinero_Comprado_Ultimos_Seis_Meses" class="form-control" required><br>
+
+        <button type="submit">Editar</button>
+    </form>
+}
+else
+{
+    <p>No se encontraron datos de clientes.</p>
+}

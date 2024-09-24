@@ -1,0 +1,115 @@
+﻿<!-- Para manejar el dropdown menu de la página principal, se utilizan las siguientes dependencias -->
+<!-- Hoja de estilos de Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Biblioteca jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- biblioteca Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Archivo JavaScript de Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AndresBalladares_Proyecto</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AndresBalladares_Proyecto.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Página principal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="inventarioDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Registro de inventario
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="inventarioDropdown">
+                                <a class="dropdown-item" asp-controller="Inventario" asp-action="Create">Insertar</a>
+                                <a class="dropdown-item" asp-controller="Inventario" asp-action="Details">Buscar</a>
+                                <a class="dropdown-item" asp-controller="Inventario" asp-action="Delete">Eliminar</a>
+                                <a class="dropdown-item" asp-controller="Inventario" asp-action="Edit">Actualizar</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="clientesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Registro de clientes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="clientesDropdown">
+                                <a class="dropdown-item" asp-controller="Clientes" asp-action="Create">Insertar</a>
+                                <a class="dropdown-item" asp-controller="Clientes" asp-action="Details">Buscar</a>
+                                <a class="dropdown-item" asp-controller="Clientes" asp-action="Delete">Eliminar</a>
+                                <a class="dropdown-item" asp-controller="Clientes" asp-action="Edit">Actualizar</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="direccionesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Registro de direcciones
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="clientesDropdown">
+                                <a class="dropdown-item" asp-controller="Direcciones" asp-action="Create">Insertar</a>
+                                <a class="dropdown-item" asp-controller="Direcciones" asp-action="Details">Buscar</a>
+                                <a class="dropdown-item" asp-controller="Direcciones" asp-action="Delete">Eliminar</a>
+                                <a class="dropdown-item" asp-controller="Direcciones" asp-action="Edit">Actualizar</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="pedidosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Registro de pedidos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="pedidosDropdown">
+                                <a class="dropdown-item" asp-controller="Pedidos" asp-action="InicioSesion">Insertar</a>
+                                <a class="dropdown-item" asp-controller="Pedidos" asp-action="Details">Buscar</a>
+                                <a class="dropdown-item" asp-controller="Pedidos" asp-action="Delete">Eliminar</a>
+                                <a class="dropdown-item" asp-controller="Pedidos" asp-action="Edit">Actualizar</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="reportesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Reportes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="pedidosDropdown">
+                                <a class="dropdown-item" asp-controller="Reportes" asp-action="PedidosDia">Pedidos por día</a>
+                                <a class="dropdown-item" asp-controller="Reportes" asp-action="PedidosUltimoMes">Pedidos del último mes</a>
+                                <a class="dropdown-item" asp-controller="Reportes" asp-action="PedidosUltimoTrimestre">Pedidos del último trimestre</a>
+                                <a class="dropdown-item" asp-controller="Reportes" asp-action="PedidosBodega">Pedidos por bodega</a>
+                                <a class="dropdown-item" asp-controller="Reportes" asp-action="PedidosClienteDia">Pedidos por cliente por día</a>
+                                <a class="dropdown-item" asp-controller="Reportes" asp-action="PedidosClienteMes">Pedidos por cliente por mes</a>
+                                <a class="dropdown-item" asp-controller="Reportes" asp-action="PedidosClienteHoraMinutos">Pedidos por cliente por hora y minutos</a>
+                                <a class="dropdown-item" asp-controller="Reportes" asp-action="ClientesMasPedidosMes">Clientes con más pedidos por mes</a>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - AndresBalladares_Proyecto - <a asp-area="" asp-controller="Home" asp-action="Privacy">Políticas de privacidad</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
