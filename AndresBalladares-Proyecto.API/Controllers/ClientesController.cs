@@ -101,6 +101,7 @@ namespace AndresBalladares_Proyecto.API.Controllers
             }
         }
 
+        //Código utilizando cache en lugar de una DB:
         //Manejo de Create:
         /*[HttpPost("Insertar")]
         public ActionResult Create([FromBody] Cliente value)
