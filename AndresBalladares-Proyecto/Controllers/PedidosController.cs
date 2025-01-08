@@ -245,7 +245,7 @@ namespace AndresBalladares_Proyecto.Controllers
             return View("InicioSesion", clientes);
         }
 
-        /* Código realizado en el proyecto 1:
+        /* Código realizado utilizando cache:
         public void CachePedido(Pedido pedido)
         {
             var Pedidos = _Cache.Get("Pedidos") as List<Pedido>;
