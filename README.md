@@ -1,5 +1,5 @@
 # PaginaWebAPI-SQL
-Sistema web CRUD con API y base de datos de un servicio de bebidas.
+Sistema web CRUD con API y base de datos de un servicio que administra bebidas y sus características. 
 
 Para que este sistema funcione, se necesita:
 - .NET 7.
