@@ -205,7 +205,7 @@ namespace AndresBalladares_Proyecto.API.Data
         }
 
         //Actualizar elementos:
-        /*public void ActualizarCliente(int ID, Models.Cliente value)
+        /*public void ActualizarCliente(int ID, Models.Cliente value)    //Este ActuaizarCliente NO actualiza la ID.
         {
             var cliente = DbContext.Clientes.Find(ID);
             if (cliente != null)
@@ -303,7 +303,7 @@ namespace AndresBalladares_Proyecto.API.Data
             }
         }
 
-        /*public void ActualizarInventario(int ID, Models.Inventario value)
+        /*public void ActualizarInventario(int ID, Models.Inventario value)    //Este ActualizarInventario NO actualiza la ID
         {
             var inventario = DbContext.Inventarios.Find(ID);
             if (inventario != null)
